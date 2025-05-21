@@ -81,7 +81,10 @@ app.use(
   cors({
     origin: function (origin, callback) {
       // 多網址
-      if (!origin || whiteList.includes(origin)) {
+      if (
+        !origin ||
+        whiteList.some((allowedOrigin) => origin.startsWith(allowedOrigin))
+      ) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
