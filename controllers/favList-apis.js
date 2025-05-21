@@ -1,5 +1,5 @@
-import { FavoriteLists } from "../../server/models/FavoriteListSchema.js";
-import { FavoriteWord } from "../../server/models/FavoriteWordSchema.js";
+import { FavoriteLists } from "../models/FavoriteListSchema.js";
+import { FavoriteWord } from "../models/FavoriteWordSchema.js";
 
 export const getFavoriteLists = async (req, res) => {
   if (!req.isAuthenticated()) {

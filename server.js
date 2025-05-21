@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import mongoose from "mongoose";
 import { User } from "./models/UserSchema.js";
-import { router as UserRoutes } from "./routes/UserRoutes.js";
+import { router as UserRoutes } from "./routes/user-routes.js";
 import { router as FavRoutes } from "./routes/FavRoutes.js";
 import passport from "passport";
 import express from "express";
