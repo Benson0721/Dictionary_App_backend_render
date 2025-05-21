@@ -134,10 +134,6 @@ app.get("/wakeup", (req, res) => {
   res.send("Allright...I have wake up...");
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../dist", "index.html"));
-});
-
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });
