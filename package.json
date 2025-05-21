@@ -1,0 +1,31 @@
+{
+  "name": "dictionary-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "build": "vite build --config vite.config.js",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "bulid:css": "postcss src/css/index.css --dir ./src/css && postcss src/css/GridSesctions.css --dir ./src/css && postcss src/css/Section.css --dir ./src/css ",
+    "tailwind:css": "npx tailwindcss -i ./client/src/assets/css/tailwind.css -o ./client/src/assets/css/generated-tailwind.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "npm run server"
+  },
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "passport-local-mongoose": "^8.0.0"
+  }
+}
