@@ -12,7 +12,7 @@ const FavoriteWordSchema = new Schema({
   },
   audio: {
     type: String,
-    required: true,
+    default: "",
   },
   meaning: {
     type: String,

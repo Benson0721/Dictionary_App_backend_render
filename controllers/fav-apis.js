@@ -58,6 +58,7 @@ export const addFavoriteWord = async (req, res) => {
       await FavoriteLists.findByIdAndUpdate(listID, {
         $addToSet: { favoriteWords: favWord._id },
       });
+
       res.json(favWord);
     }
   } catch (error) {
