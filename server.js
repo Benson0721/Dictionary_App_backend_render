@@ -121,13 +121,15 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-if (process.env.NODE_ENV === "production") {
+app.use("/", UserRoutes);
+app.use("/", FavRoutes);
+/*if (process.env.NODE_ENV === "production") {
   app.use("/api", UserRoutes);
   app.use("/api", FavRoutes);
 } else {
   app.use("/", UserRoutes);
   app.use("/", FavRoutes);
-}
+}*/
 
 app.get("/wakeup", (req, res) => {
   console.log("ok!ok!....I am wakeup!");
